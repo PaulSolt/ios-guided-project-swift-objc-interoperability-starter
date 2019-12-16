@@ -21,8 +21,8 @@
 		Contact *paul = [[Contact alloc] initWithName:@"Paul" relationship:@"Myself"];
 		Contact *steph = [[Contact alloc] initWithName:@"Steph" relationship:@"Wife"];
 		
-		_contacts = @[paul, steph]; // [NSArray arrayWithObjects:paul, steph, nil];
-		
+//		_contacts = @[paul, steph]; // [NSArray arrayWithObjects:paul, steph, nil];
+		_contacts = @[paul, steph, @"Bob"]; // Currently NSArray can store any type, making this bad data
 		
 	}
 	return self;

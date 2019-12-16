@@ -64,10 +64,10 @@
 			children = (
 				BD36BDFA23A7F27B00ED64BD /* AppDelegate.swift */,
 				BD36BDFC23A7F27B00ED64BD /* SceneDelegate.swift */,
-				BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */,
 				BD36BE1223A7F49400ED64BD /* Contact.swift */,
 				BD89CC5223A7F5B00099F3E1 /* LSIContactController.h */,
 				BD89CC5323A7F5B00099F3E1 /* LSIContactController.m */,
+				BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */,
 				BD36BE0E23A7F28E00ED64BD /* Main.storyboard */,
 				BD36BE0323A7F27C00ED64BD /* Assets.xcassets */,
 				BD36BE0523A7F27C00ED64BD /* LaunchScreen.storyboard */,

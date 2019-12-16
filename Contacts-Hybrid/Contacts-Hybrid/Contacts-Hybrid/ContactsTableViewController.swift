@@ -7,9 +7,14 @@
 //
 
 import UIKit
+// import LSIContactController // Won't work! Imports are for modules
 
+// "importing" Objective-C into Swift to make our model controller
 
 class ContactsTableViewController: UITableViewController {
+	
+	// Objective-C class being used in Swift
+	lazy private var contactController = LSIContactController()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -17,19 +22,26 @@ class ContactsTableViewController: UITableViewController {
 		
 	}
 	
-	
 	// MARK: UITableViewDataSource methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		
-		
-		return 10
+		return contactController.contacts.count
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 		
-		cell.textLabel?.text = "HI"
+		// TODO: Make this load the contact information
+		
+		// Lightweight generics to make it so we don't have to worry about the class type
+		
+		guard let contact = contactController.contacts[indexPath.row] as? Contact else {
+			cell.backgroundColor = .red // invalid object
+			return cell
+		}
+		
+		cell.textLabel?.text = contact.name
+		cell.detailTextLabel?.text = contact.relationship ?? ""
 		
 		return cell
 	}

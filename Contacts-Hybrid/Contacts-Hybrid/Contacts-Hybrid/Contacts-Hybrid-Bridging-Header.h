@@ -4,3 +4,5 @@
 
 // Do your Objective-C import statements to expose
 // Objective-C code, symbols, classes, etc to Swift 
+
+#import "LSIContactController.h"
