@@ -29,11 +29,15 @@
 	// TODO: Create controller
 	self.personController = [[PersonController alloc] init];
 	
-	// TODO: call the API
+	// TODO: Remove Hardcoded API call
 	
 	[self.personController searchForPeopleWith:@"Skywalker" completion:^(NSArray<LSIPerson *> * _Nullable people, NSError * _Nullable error) {
 		NSLog(@"Searched!");
 		
+		dispatch_async(dispatch_get_main_queue(), ^{
+			self.people = people;
+			[self.tableView reloadData];
+		});
 		
 	}];
 }
@@ -41,10 +45,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-	// TODO: Implement number of rows
-	
-	return 0;
+    return self.people.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,8 +53,12 @@
 	
 	// TODO: Implement a custom cell named PersonTableViewCell.swift
 	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
-    
+//	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell" forIndexPath:indexPath];
+
+	LSIPerson *person = self.people[indexPath.row];
+	cell.textLabel.text = person.name;
+	
 	// TODO: Set the cell to the current Person object
 	
 	
