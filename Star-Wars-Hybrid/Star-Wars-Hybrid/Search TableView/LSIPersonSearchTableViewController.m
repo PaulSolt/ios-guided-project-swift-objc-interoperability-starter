@@ -7,16 +7,36 @@
 //
 
 #import "LSIPersonSearchTableViewController.h"
+#import "LSIPerson.h"
+#import "Star_Wars_Hybrid-Swift.h"
 
 @interface LSIPersonSearchTableViewController () <UISearchBarDelegate>
 
 // TODO: Create a PersonController.swift and make it an instance variable
+
+@property (nonatomic) NSArray<LSIPerson *> *people;
+@property (nonatomic) PersonController *personController;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
 @implementation LSIPersonSearchTableViewController
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	
+	// TODO: Create controller
+	self.personController = [[PersonController alloc] init];
+	
+	// TODO: call the API
+	
+	[self.personController searchForPeopleWith:@"Skywalker" completion:^(NSArray<LSIPerson *> * _Nullable people, NSError * _Nullable error) {
+		NSLog(@"Searched!");
+		
+		
+	}];
+}
 
 #pragma mark - Table view data source
 

@@ -12,20 +12,26 @@
 
 // TODO: Add nullabilty annotations
 
+NS_SWIFT_NAME(Person)
 @interface LSIPerson : NSObject
 
+// What should I add for nullability annotations?
+// If the data can have null values:
+// 	 1. provide a default
+//   2. use an optional type
 
-@property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, copy, readonly) NSString *birthYear;
+@property (nonatomic, copy, readonly, nonnull) NSString *name;
+@property (nonatomic, copy, readonly, nonnull) NSString *birthYear;
 @property (nonatomic, readonly) double height;
-@property (nonatomic, copy, readonly) NSString *eyeColor;
+@property (nonatomic, copy, readonly, nullable) NSString *eyeColor;
 
-- (instancetype)initWithName:(NSString *)name
-                   birthYear:(NSString *)birthYear
+- (nonnull instancetype)initWithName:(nonnull NSString *)name
+                   birthYear:(nonnull NSString *)birthYear
                       height:(double)height
-                    eyeColor:(NSString *)eyeColor;
+                    eyeColor:(nullable NSString *)eyeColor;
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+// Bad dictionary? Empty? Let's return nil if the values are missing
+- (nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dictionary;
 
 
 @end

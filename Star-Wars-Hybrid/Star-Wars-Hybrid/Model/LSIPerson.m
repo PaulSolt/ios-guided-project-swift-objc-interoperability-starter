@@ -28,8 +28,7 @@
     double height = [heightString doubleValue];
     NSString *eyeColor = dictionary[@"eye_color"];
     
-	// TODO: Discuss the failable initializer
-	
+	// failable initializer
     if (!name || !birthYear || !heightString || !eyeColor) {
         return nil;
     }
