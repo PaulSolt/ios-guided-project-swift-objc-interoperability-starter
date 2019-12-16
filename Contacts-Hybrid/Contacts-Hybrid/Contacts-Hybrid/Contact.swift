@@ -10,6 +10,7 @@ import Foundation
 
 // 1. Always need to subclass from NSObject to use the class in Objective-C
 // 2. Any property, class, method, init needs to be marked with @objc
+// 3. Swift structs are not usable in Objective-C
 
 @objc class Contact: NSObject {
 	@objc var name: String

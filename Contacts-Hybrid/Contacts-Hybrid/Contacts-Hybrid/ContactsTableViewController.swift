@@ -14,11 +14,10 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 	
 	// Objective-C class being used in Swift
-	lazy private var contactController = LSIContactController()
+	lazy private var contactController = ContactController()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		
 	}
 	
@@ -31,12 +30,8 @@ class ContactsTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 		
-		// TODO: Lightweight generics to make it so we don't have to worry about the class type
-		guard let contact = contactController.contacts[indexPath.row] as? Contact else {
-			cell.backgroundColor = .red // invalid object is visually different empty cell
-			return cell
-		}
-		
+		// Lightweight generics to make it so we don't have to worry about the class type
+		let contact = contactController.contacts[indexPath.row]
 		cell.textLabel?.text = contact.name
 		cell.detailTextLabel?.text = contact.relationship ?? ""
 		

@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@class Contact;
 
+NS_SWIFT_NAME(ContactController)
 @interface LSIContactController : NSObject
 
-@property NSArray *contacts;
+// What property attributes?
+// nonnull = not an optional: NSArray
+// nullable = is an optional: NSArray?
+
+// Lightweight generics: [Contact]  or NSArray<Contact>
+@property (nonatomic, readonly, copy, nonnull) NSArray<Contact *> *contacts;
 
 @end
-
-NS_ASSUME_NONNULL_END
