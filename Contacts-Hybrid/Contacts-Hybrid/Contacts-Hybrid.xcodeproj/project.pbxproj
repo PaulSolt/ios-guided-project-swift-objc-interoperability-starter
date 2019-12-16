@@ -14,6 +14,7 @@
 		BD36BE0F23A7F28E00ED64BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD36BE0E23A7F28E00ED64BD /* Main.storyboard */; };
 		BD36BE1123A7F2E200ED64BD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */; };
 		BD36BE1323A7F49400ED64BD /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD36BE1223A7F49400ED64BD /* Contact.swift */; };
+		BD89CC5423A7F5B00099F3E1 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD89CC5323A7F5B00099F3E1 /* LSIContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		BD36BE0E23A7F28E00ED64BD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../Main.storyboard; sourceTree = "<group>"; };
 		BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		BD36BE1223A7F49400ED64BD /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		BD89CC5123A7F5B00099F3E1 /* Contacts-Hybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts-Hybrid-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD89CC5223A7F5B00099F3E1 /* LSIContactController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSIContactController.h; sourceTree = "<group>"; };
+		BD89CC5323A7F5B00099F3E1 /* LSIContactController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSIContactController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,13 @@
 				BD36BDFC23A7F27B00ED64BD /* SceneDelegate.swift */,
 				BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */,
 				BD36BE1223A7F49400ED64BD /* Contact.swift */,
+				BD89CC5223A7F5B00099F3E1 /* LSIContactController.h */,
+				BD89CC5323A7F5B00099F3E1 /* LSIContactController.m */,
 				BD36BE0E23A7F28E00ED64BD /* Main.storyboard */,
 				BD36BE0323A7F27C00ED64BD /* Assets.xcassets */,
 				BD36BE0523A7F27C00ED64BD /* LaunchScreen.storyboard */,
 				BD36BE0823A7F27C00ED64BD /* Info.plist */,
+				BD89CC5123A7F5B00099F3E1 /* Contacts-Hybrid-Bridging-Header.h */,
 			);
 			path = "Contacts-Hybrid";
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 				TargetAttributes = {
 					BD36BDF623A7F27B00ED64BD = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -141,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD89CC5423A7F5B00099F3E1 /* LSIContactController.m in Sources */,
 				BD36BE1323A7F49400ED64BD /* Contact.swift in Sources */,
 				BD36BDFB23A7F27B00ED64BD /* AppDelegate.swift in Sources */,
 				BD36BE1123A7F2E200ED64BD /* ContactsTableViewController.swift in Sources */,
@@ -280,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Contacts-Hybrid/Info.plist";
@@ -289,6 +299,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Contacts-Hybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts-Hybrid/Contacts-Hybrid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = "Contacts-Hybrid/Info.plist";
@@ -307,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lambdaschool.Contacts-Hybrid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts-Hybrid/Contacts-Hybrid-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
