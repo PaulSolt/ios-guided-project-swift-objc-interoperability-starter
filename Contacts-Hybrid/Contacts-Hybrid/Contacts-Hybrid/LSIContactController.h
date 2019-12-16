@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIContactController : NSObject
 
+@property NSArray *contacts;
+
 @end
 
 NS_ASSUME_NONNULL_END
