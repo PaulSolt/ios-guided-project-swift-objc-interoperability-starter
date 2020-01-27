@@ -14,7 +14,10 @@ import Foundation
 // Must use a class in Swift if we want to use it from Objective-C
 // ModelController is going to be in Objective-C
 
-@objc class Contact: NSObject {
+//@objc(LSIContact)	// Rename our Swift class to LSIContact (Buggy with Objective-C forward class declaration)
+// BUG: Going from Swift to Objective-C to Swift seems to cause problems with renaming the build symbol
+@objc
+class Contact: NSObject {
 	@objc var name: String
 	@objc var relationship: String?
 	
