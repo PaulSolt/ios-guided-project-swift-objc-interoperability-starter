@@ -11,7 +11,7 @@ import UIKit
 class ContactsTableViewController: UITableViewController {
 	
 	// Swift class using an Objective-C class (Use Bridging Header)
-	let contactsController = LSIContactsController()
+	let contactsController = ContactsController()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

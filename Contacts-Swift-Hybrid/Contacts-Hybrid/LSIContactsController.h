@@ -11,6 +11,7 @@
 @class Contact; // forward declare the Swift class
 //@class LSIContact;
 
+NS_SWIFT_NAME(ContactsController)
 @interface LSIContactsController : NSObject
 
 // 1. Lightweight generics
