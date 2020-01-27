@@ -8,8 +8,10 @@
 
 import UIKit
 
-
 class ContactsTableViewController: UITableViewController {
+	
+	// Swift class using an Objective-C class (Use Bridging Header)
+	let contactsController = LSIContactsController()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -17,19 +19,19 @@ class ContactsTableViewController: UITableViewController {
 		
 	}
 	
-	
 	// MARK: UITableViewDataSource methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		
-		
-		return 10
+		return contactsController.contacts.count
 	}
-	
+
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
 		
-		cell.textLabel?.text = "HI"
+		if let contact = contactsController.contacts[indexPath.row] as? Contact {
+			cell.textLabel?.text = contact.name
+			cell.detailTextLabel?.text = contact.relationship
+		}
 		
 		return cell
 	}

@@ -14,11 +14,11 @@ import Foundation
 // Must use a class in Swift if we want to use it from Objective-C
 // ModelController is going to be in Objective-C
 
-class Contact {
-	var name: String
-	var relationship: String?
+@objc class Contact: NSObject {
+	@objc var name: String
+	@objc var relationship: String?
 	
-	init(name: String, relationship: String?) {
+	@objc init(name: String, relationship: String?) {
 		self.name = name
 		self.relationship = relationship
 	}
