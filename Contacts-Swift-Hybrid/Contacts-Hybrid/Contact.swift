@@ -27,3 +27,9 @@ class Contact: NSObject {
 		self.relationship = relationship
 	}
 }
+
+// 1. Use Swift Classes
+// 2. Subclass NSObject
+// 3. mark your properties/methods with @objc (@objcMembers)
+
+

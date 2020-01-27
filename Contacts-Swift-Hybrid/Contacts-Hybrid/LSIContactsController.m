@@ -20,7 +20,7 @@
 			[[Contact alloc] initWithName:@"Steph" relationship:@"Wife"]
 		];
 		
-		Contact *contact = [_contacts firstObject]; // typed to "Contact"
+		//Contact *contact = [_contacts firstObject]; // typed to "Contact"
 	}
 	return self;
 }

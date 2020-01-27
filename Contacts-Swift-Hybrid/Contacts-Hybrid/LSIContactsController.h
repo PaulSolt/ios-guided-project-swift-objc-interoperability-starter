@@ -24,9 +24,13 @@ NS_SWIFT_NAME(ContactsController)
  Nullability
  
  * nullable - Optional in Swift (nil or value)
+	[Contact]?
  * nonnull - Not an Optional (can never be nil)
+	[Contact]
  * nil_resettable - UITextField.text = nil (Sets the text to "")
- * nil_unspecified - Default (Implicitly unwrapped optional)
+	[Contact]?
+ * nil_unspecified* - Default (Implicitly unwrapped optional)
+	[Contact]!
  
  */
 
