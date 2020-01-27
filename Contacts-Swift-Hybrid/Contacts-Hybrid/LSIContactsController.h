@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class Contact; // forward declare the Swift class
+
 @interface LSIContactsController : NSObject
 
-@property (nonatomic, readonly) NSArray *contacts;
+// 1. Lightweight generics
+// 2. Nullability
+// 3. Change names of classes (Bug: going back and forth)
+
+@property (nonatomic, readonly) NSArray<Contact *> *contacts;
 
 @end

@@ -19,6 +19,8 @@
 			[[Contact alloc] initWithName:@"Paul" relationship:@"Myself"],
 			[[Contact alloc] initWithName:@"Steph" relationship:@"Wife"]
 		];
+		
+		Contact *contact = [_contacts firstObject]; // typed to "Contact"
 	}
 	return self;
 }
