@@ -11,11 +11,11 @@ import Foundation
 // QUESTION: Why is this a class?
 // Swift structs do not work in Objective-C, so we need to use a class
 
-class Contact {
-    var name: String
-    var relationship: String?
+@objc class Contact: NSObject {
+    @objc var name: String
+    @objc var relationship: String?
     
-    init(name: String, relationship: String?) {
+    @objc init(name: String, relationship: String?) {
         self.name = name
         self.relationship = relationship
     }
