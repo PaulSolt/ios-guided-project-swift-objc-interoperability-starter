@@ -15,8 +15,10 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
 	
+    // Rename an Objective-C class for Swift
+
     // We need to expose Objc code files to Swift using the bridging header
-    var contactController = LSIContactController()  // alloc/init
+    var contactController = ContactController()  // alloc/init
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -31,15 +33,21 @@ class ContactsTableViewController: UITableViewController {
         return contactController.contacts.count
 	}
 	
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
-		
-        if let contact = contactController.contacts[indexPath.row] as? Contact {
-            cell.textLabel?.text = contact.name
-            cell.detailTextLabel?.text = contact.relationship
-        }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-		return cell
-	}
+        // contacts array is now a [Contact], not [Any]
+        let contact = contactController.contacts[indexPath.row]
+
+        cell.textLabel?.text = contact.name
+        cell.detailTextLabel?.text = contact.relationship
+        
+        return cell
+    }
+    
+    // We can drop the prefix from the name in Swift
+    // NSDate -> Date
+    // NSArray -> Array
+    
 
 }
