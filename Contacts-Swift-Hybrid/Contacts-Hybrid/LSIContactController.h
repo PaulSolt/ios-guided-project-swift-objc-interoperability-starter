@@ -8,20 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
-@class Contact; // Forward class declaration (Swift class)
+@protocol LSIContactControllerDelegate <NSObject>
 
-NS_ASSUME_NONNULL_BEGIN
+- (void)notifyAll;
+
+@end
+
+@class Contact; // Forward class declaration (Swift class)
 
 // Rename for Swift
 NS_SWIFT_NAME(ContactController)
 @interface LSIContactController : NSObject
 
 // Add lightweight generics to give type information for Swift
-@property (nonatomic, readonly) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly, nonnull) NSArray<Contact *> *contacts;
+
+// @property (weak) id <XYZPieChartViewDataSource> dataSource;
+
+@property (nonatomic, weak, nullable) id<LSIContactControllerDelegate> delegate;
+
+// Nullability / (Optional)
+
+// nullable = [Contact]?
+// nonnull = [Contact]
+// nil_resettable = [Contact]?   // UITextField.text (setting to nil sets it back to "")
+// nil_unspecified* = [Contact]!
+
 
 // addContact (add to database, firebase, etc)
 // removeContact
 
 @end
-
-NS_ASSUME_NONNULL_END

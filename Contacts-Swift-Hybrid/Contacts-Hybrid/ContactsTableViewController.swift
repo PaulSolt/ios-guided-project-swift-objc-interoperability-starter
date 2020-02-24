@@ -23,7 +23,7 @@ class ContactsTableViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
+        contactController.delegate = self
 	}
 	
 	
@@ -38,10 +38,10 @@ class ContactsTableViewController: UITableViewController {
         
         // contacts array is now a [Contact], not [Any]
         let contact = contactController.contacts[indexPath.row]
-
+            
         cell.textLabel?.text = contact.name
         cell.detailTextLabel?.text = contact.relationship
-        
+    
         return cell
     }
     
@@ -50,4 +50,12 @@ class ContactsTableViewController: UITableViewController {
     // NSArray -> Array
     
 
+}
+
+extension ContactsTableViewController: LSIContactControllerDelegate {
+    
+    func notifyAll() {
+        
+    }
+    
 }
