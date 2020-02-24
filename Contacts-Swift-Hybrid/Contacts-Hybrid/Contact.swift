@@ -11,7 +11,9 @@ import Foundation
 // QUESTION: Why is this a class?
 // Swift structs do not work in Objective-C, so we need to use a class
 
-@objc class Contact: NSObject {
+//@objc (LSIContact)  // Can rename it for Objective-C  (causing a issue for a forward class declaration)
+@objc
+class Contact: NSObject {
     @objc var name: String
     @objc var relationship: String?
     
