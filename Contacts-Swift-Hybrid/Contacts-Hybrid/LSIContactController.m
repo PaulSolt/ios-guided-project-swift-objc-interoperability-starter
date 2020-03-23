@@ -37,7 +37,7 @@
 
 - (NSMutableArray *)internalContacts {
     if (!_internalContacts) {
-        _internalContacts = [[NSMutableArray alloc] init];
+         _internalContacts = [[NSMutableArray alloc] init];
     }
     return _internalContacts;
 }

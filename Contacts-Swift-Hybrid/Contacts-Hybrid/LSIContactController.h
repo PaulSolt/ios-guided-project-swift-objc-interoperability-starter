@@ -14,8 +14,14 @@
 // NOTE: Only import the auto-generated Swift header in .m files, you will see
 // build cycles when you build
 
+NS_SWIFT_NAME(ContactController)
 @interface LSIContactController : NSObject
 
+// Nullability flags + Lightweight Generics
+// nonnull: [Contact]
+// nullable: [Contact]?
+// null_unspecified: [Contact]!
+// null_resetable: [Contact]!
 @property (nonatomic, readonly, copy, nonnull) NSArray<Contact *> *contacts;
 
 @end
