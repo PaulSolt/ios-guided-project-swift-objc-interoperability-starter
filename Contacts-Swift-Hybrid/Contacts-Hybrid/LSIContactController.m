@@ -8,6 +8,9 @@
 
 #import "LSIContactController.h"
 
+// "Project_Name-Swift.h"
+#import "Contacts_Hybrid-Swift.h"
+
 @interface LSIContactController ()
 
 @property (nonatomic) NSMutableArray *internalContacts;
@@ -42,8 +45,12 @@
 // 3. test data
 - (void)addTestData {
 
+    // In Objective-C we want to create a Contact from Swift
+    // Import the Swift header
+    
     [self.internalContacts addObjectsFromArray:@[
-        
+        [[Contact alloc] initWithName:@"Paul Solt" relationship:@"Myself"],
+        [[Contact alloc] initWithName:@"Steph Solt" relationship:@"Wife"],
     ]];
 }
 
