@@ -22,7 +22,6 @@ class ContactsTableViewController: UITableViewController {
         tableView.reloadData()
 	}
 	
-	
 	// MARK: UITableViewDataSource methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

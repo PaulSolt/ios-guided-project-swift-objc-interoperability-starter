@@ -10,6 +10,7 @@
 
 // forward class declaration
 @class Contact;
+//@class LSIContact; // BUG: Does not work in Swift 5.1, don't rename Swift classes for Objc
 
 // NOTE: Only import the auto-generated Swift header in .m files, you will see
 // build cycles when you build

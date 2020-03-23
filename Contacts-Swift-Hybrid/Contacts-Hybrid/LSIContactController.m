@@ -8,7 +8,8 @@
 
 #import "LSIContactController.h"
 
-// "Project_Name-Swift.h"
+// Swift Auto-generated Header
+// "Project_Name-Swift.h"  any special symbol (spaces) is replaced with a _
 #import "Contacts_Hybrid-Swift.h"
 
 @interface LSIContactController ()
