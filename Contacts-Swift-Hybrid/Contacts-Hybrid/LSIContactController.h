@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+// forward class declaration
+@class Contact;
+
+// NOTE: Only import the auto-generated Swift header in .m files, you will see
+// build cycles when you build
+
 @interface LSIContactController : NSObject
 
-@property (nonatomic, readonly, copy) NSArray *contacts;
+@property (nonatomic, readonly, copy, nonnull) NSArray<Contact *> *contacts;
 
 @end

@@ -29,18 +29,16 @@ class ContactsTableViewController: UITableViewController {
         return contactsController.contacts.count
 	}
 	
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-        guard let contact = contactsController.contacts[indexPath.row] as? Contact else {
-            return cell // error, not supported!
-        }
+        let contact = contactsController.contacts[indexPath.row]
         
         // Question: Why don't I see my properties?
         cell.textLabel?.text = contact.name
         cell.detailTextLabel?.text = contact.relationship
-		
-		return cell
-	}
+        
+        return cell
+    }
 
 }
