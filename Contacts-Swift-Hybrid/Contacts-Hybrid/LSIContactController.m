@@ -22,7 +22,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        
+        [self addTestData];
     }
     return self;
 }

@@ -8,27 +8,37 @@
 
 import UIKit
 
+// Swift (model) -> Objective-C (model controller) -> Swift (Table View)
+
+//import "LSIContactController.h" // Does not work! Use bridging header.
 
 class ContactsTableViewController: UITableViewController {
 	
+    let contactsController = LSIContactController()
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
+        tableView.reloadData()
 	}
 	
 	
 	// MARK: UITableViewDataSource methods
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: Implement controller count
-		return 0
+        return contactsController.contacts.count
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
-        // TODO: Implement display logic
+        guard let contact = contactsController.contacts[indexPath.row] as? Contact else {
+            return cell // error, not supported!
+        }
+        
+        // Question: Why don't I see my properties?
+        cell.textLabel?.text = contact.name
+        cell.detailTextLabel?.text = contact.relationship
 		
 		return cell
 	}
