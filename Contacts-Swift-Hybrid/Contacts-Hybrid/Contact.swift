@@ -19,6 +19,16 @@ import Foundation
 
 // Swift enum with associated values are also not supported in Objc
 
+// Rename a Swift class for Objective-C 
+//@objc(LSIContact) // This has been flakey for me, I don't recommend renaming Swift classes
+// for Objective-C (unless Apple fixed this in Xcode 11.4)
+
+// 3 things to expose a Swift object to Objective-C
+// 1. Subclass from NSObject
+// 2. Must be a class, not a Swift struct
+// 3. Adding @objc for any property, method, init
+
+//@objcMembers - expose all symbols to Objc
 @objc class Contact: NSObject {
     @objc var name: String
     @objc let relationship: String?

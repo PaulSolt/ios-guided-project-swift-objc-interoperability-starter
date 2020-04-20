@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // Forward declaration
-@class Contact;
+@class LSIContact;
 
 // Use this macro to rename your class for use in Swift
 NS_SWIFT_NAME(ContactController)
@@ -23,6 +23,6 @@ NS_SWIFT_NAME(ContactController)
 // nonnull -> [Contact]
 // null_resettable -> [Contact]?
 
-@property (nonatomic, readonly, copy, nonnull) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly, copy, nonnull) NSArray<LSIContact *> *contacts;
 
 @end
