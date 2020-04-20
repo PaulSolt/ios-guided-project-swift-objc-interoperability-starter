@@ -11,7 +11,7 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
 	
-    var contactController = LSIContactController()
+    var contactController = ContactController()
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -30,7 +30,7 @@ class ContactsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
         // How do I get a contact?
-        guard let contact = contactController.contacts[indexPath.row] as? Contact else { return cell }
+        let contact = contactController.contacts[indexPath.row]
         
         cell.textLabel?.text = contact.name
         cell.detailTextLabel?.text = contact.relationship
