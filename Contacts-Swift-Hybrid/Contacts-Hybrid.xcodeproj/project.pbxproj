@@ -14,7 +14,7 @@
 		BD36BE0723A7F27C00ED64BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD36BE0523A7F27C00ED64BD /* LaunchScreen.storyboard */; };
 		BD36BE1123A7F2E200ED64BD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD36BE1023A7F2E200ED64BD /* ContactsTableViewController.swift */; };
 		BDC05447244E0022004B2BB2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC05446244E0022004B2BB2 /* Contact.swift */; };
-		BDC0544B244E0238004B2BB2 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC0544A244E0238004B2BB2 /* LSIContactController.m */; };
+		BDC0544E244E0657004B2BB2 /* LSIContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC0544A244E0238004B2BB2 /* LSIContactController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,7 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC0544B244E0238004B2BB2 /* LSIContactController.m in Sources */,
+				BDC0544E244E0657004B2BB2 /* LSIContactController.m in Sources */,
 				BDC05447244E0022004B2BB2 /* Contact.swift in Sources */,
 				BD36BDFB23A7F27B00ED64BD /* AppDelegate.swift in Sources */,
 				BD36BE1123A7F2E200ED64BD /* ContactsTableViewController.swift in Sources */,

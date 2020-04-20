@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+// Forward declaration
+@class Contact;
+
 @interface LSIContactController : NSObject
 
+@property (nonatomic, readonly) NSArray *contacts;
 
 @end

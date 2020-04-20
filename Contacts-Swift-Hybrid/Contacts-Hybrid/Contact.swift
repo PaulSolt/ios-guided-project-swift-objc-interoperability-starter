@@ -19,12 +19,18 @@ import Foundation
 
 // Swift enum with associated values are also not supported in Objc
 
-class Contact: NSObject {
-    let name: String
-    let relationship: String?
+@objc class Contact: NSObject {
+    @objc var name: String
+    @objc let relationship: String?
     
-    init(name: String, relationship: String?) {
+    @objc init(name: String, relationship: String?) {
         self.name = name
         self.relationship = relationship
     }
+    
+    @objc func setName(name: String) {
+        self.name = name
+    }
+    
+    // add @objc to any method, property, init to see it in Objc
 }
