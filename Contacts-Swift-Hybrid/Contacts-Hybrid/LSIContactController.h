@@ -15,6 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+NS_SWIFT_NAME(ContactController)
 @interface LSIContactController : NSObject
 
 // Using lightweight generics to provide type information (so it's easier to use in Swift)
