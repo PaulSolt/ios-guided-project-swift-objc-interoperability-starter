@@ -13,6 +13,7 @@ import Foundation
 // To use this in Objective-C we need to subclass from NSObject
 // Swift Structs are not compatible with Objective-C structures
 
+// Add a comment
 class Contact: NSObject {
     var name: String
     var relationship: String?
