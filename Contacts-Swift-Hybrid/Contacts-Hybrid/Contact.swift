@@ -16,7 +16,7 @@ import Foundation
 // Add a comment
 
 // Rename class, properties, and methods using @objc(newNameForObjc)
-@objc(LSIContact)
+// @objc(LSIContact) // Probably better to not rename class
 class Contact: NSObject {
     @objc var name: String
     @objc var relationship: String?
