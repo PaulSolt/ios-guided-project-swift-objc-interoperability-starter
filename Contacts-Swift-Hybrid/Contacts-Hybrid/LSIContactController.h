@@ -13,15 +13,20 @@
 //@class LSIContact;
 @class Contact;
 
-NS_ASSUME_NONNULL_BEGIN
-
 NS_SWIFT_NAME(ContactController)
 @interface LSIContactController : NSObject
 
 // Using lightweight generics to provide type information (so it's easier to use in Swift)
 // [Any] -> [Contact]
-@property (nonatomic, readonly) NSArray<Contact *> *contacts;  // default property/variable value is nil or 0
+
+// default: [Contact]!
+
+// nullable          [Contact]?
+// nonnull           [Contact]
+// null_resettable   [Contact]?
+// null_unspecified* [Contact]!
+
+
+@property (nonatomic, readonly, nullable) NSArray<Contact *> *contacts;  // default property/variable value is nil or 0
 
 @end
-
-NS_ASSUME_NONNULL_END

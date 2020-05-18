@@ -22,19 +22,19 @@ class ContactsTableViewController: UITableViewController {
 	
 	// MARK: UITableViewDataSource methods
 	
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contactController.contacts.count
-    }
+override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return contactController.contacts?.count ?? 0
+}
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
-        
-        let contact = contactController.contacts[indexPath.row]
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
+    
+    guard let contact = contactController.contacts?[indexPath.row] else { return cell }
 //        let c2 = Contact(
-        cell.textLabel?.text = contact.name
-        cell.detailTextLabel?.text = contact.relationship
-        
-        return cell
-    }
+    cell.textLabel?.text = contact.name
+    cell.detailTextLabel?.text = contact.relationship
+    
+    return cell
+}
 
 }

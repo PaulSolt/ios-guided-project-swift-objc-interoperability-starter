@@ -18,8 +18,8 @@ import Foundation
 // Rename class, properties, and methods using @objc(newNameForObjc)
 // @objc(LSIContact) // Probably better to not rename class
 class Contact: NSObject {
-    @objc var name: String
-    @objc var relationship: String?
+    @objc var name: String  // nonnull
+    @objc var relationship: String? // nullable
     
 // Default initializer
     @objc override init() {
