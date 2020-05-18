@@ -30,7 +30,7 @@ class ContactsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath)
         
         let contact = contactController.contacts[indexPath.row]
-        
+//        let c2 = Contact(
         cell.textLabel?.text = contact.name
         cell.detailTextLabel?.text = contact.relationship
         

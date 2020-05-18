@@ -4,4 +4,4 @@
 
 // Add all of our Objc files we want to expose to Swift
 
-#include "LSIContactController.h"
+#import "LSIContactController.h"
