@@ -27,6 +27,6 @@ NS_SWIFT_NAME(ContactController)
 // null_unspecified* [Contact]!
 
 
-@property (nonatomic, readonly, nullable) NSArray<Contact *> *contacts;  // default property/variable value is nil or 0
+@property (nonatomic, readonly, nonnull) NSArray<Contact *> *contacts;  // default property/variable value is nil or 0
 
 @end
