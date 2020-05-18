@@ -24,12 +24,12 @@
 // When getter is overridden and we use readonly, we need to tell compiler to make
 // a "backing" instance variable named _contacts
 @synthesize contacts = _contacts;
-- (NSArray<Contact *> *)contacts {
+- (NSArray<LSIContact *> *)contacts {
     if (!_contacts) {
         _contacts = @[
             // Create test data (remove it later)
-            [[Contact alloc] initWithName:@"Paul" relationship:@"Me"],
-            [[Contact alloc] initWithName:@"Steph" relationship:@"Wife"],
+            [[LSIContact alloc] initWithName:@"Paul" relationship:@"Me"],
+            [[LSIContact alloc] initWithName:@"Steph" relationship:@"Wife"],
         ];
     }
     return _contacts;

@@ -14,6 +14,9 @@ import Foundation
 // Swift Structs are not compatible with Objective-C structures
 
 // Add a comment
+
+// Rename class, properties, and methods using @objc(newNameForObjc)
+@objc(LSIContact)
 class Contact: NSObject {
     @objc var name: String
     @objc var relationship: String?
