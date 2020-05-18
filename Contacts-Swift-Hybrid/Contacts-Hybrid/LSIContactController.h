@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Using lightweight generics to provide type information (so it's easier to use in Swift)
 // [Any] -> [Contact]
-@property (nonatomic, readonly) NSArray<Contact *> *contacts;
+@property (nonatomic, readonly) NSArray<Contact *> *contacts;  // default property/variable value is nil or 0
 
 @end
 
