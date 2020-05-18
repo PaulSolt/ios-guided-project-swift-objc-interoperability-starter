@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class Contact;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSIContactController : NSObject
 
-@property (nonatomic, readonly) NSArray *contacts;
+// Using lightweight generics to provide type information (so it's easier to use in Swift)
+// [Any] -> [Contact]
+@property (nonatomic, readonly) NSArray<Contact *> *contacts;
 
 @end
 
