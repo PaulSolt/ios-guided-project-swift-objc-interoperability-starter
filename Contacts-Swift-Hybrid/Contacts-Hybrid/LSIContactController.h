@@ -16,6 +16,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// Renames code for Swift, so it feels like native Swift in Swift
+NS_SWIFT_NAME(ContactController)
 @interface LSIContactController : NSObject
 
 // collection of contacts?

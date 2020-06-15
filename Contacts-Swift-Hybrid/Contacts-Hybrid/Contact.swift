@@ -17,6 +17,7 @@ import Foundation
 // Rule 3: use @objc to expose properties, classes, methods to Objective-C
 // Rule 4: You must have Swift code building (added to target) or you won't get this file generated
 
+//@objc(LSIContact) // Paul doesn't recommend ... strange bugs ... may be fixed in Xcode 11.5
 @objc class Contact: NSObject {
     
     @objc var name: String
