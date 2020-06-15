@@ -23,7 +23,12 @@ NS_SWIFT_NAME(ContactController)
 // collection of contacts?
 
 // lightweight generics
-@property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
+
+// nonnull -> concrete type (not optional) [Contact]
+//      [] empty array is easier to use than a nil array
+// nullable -> Optional type [Contact]?
+
+@property (nonatomic, readonly, copy, nonnull) NSArray<Contact *> *contacts;
 
 @end
 
