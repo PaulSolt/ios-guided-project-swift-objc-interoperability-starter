@@ -14,14 +14,15 @@ import Foundation
 
 // Rule 1: must use a class
 // Rule 2: subclass from NSObject
-// Rule 3:
+// Rule 3: use @objc to expose properties, classes, methods to Objective-C
+// Rule 4: You must have Swift code building (added to target) or you won't get this file generated
 
-class Contact: NSObject {
+@objc class Contact: NSObject {
     
-    var name: String
-    var relationship: String?
+    @objc var name: String
+    @objc var relationship: String?
     
-    init(name: String, relationship: String?) {
+    @objc init(name: String, relationship: String?) {
         // Swift use self.name, but in Objective-C use _name = name
         self.name = name
         self.relationship = relationship
